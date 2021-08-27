@@ -32,7 +32,8 @@ hr {
 }
 
 .container {
-    width: auto;
+    width: 80%;
+    margin: auto;
     max-width: 680px;
     padding: 0 15px;
 }

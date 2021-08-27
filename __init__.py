@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 import os
-from . import db
 
 
 def create_app():
@@ -10,10 +9,9 @@ def create_app():
     )
         
         
-    from . import todolist
+    from . import db,todolist
     app.register_blueprint(todolist.bp)    
     
-    from . import db
     db.init_app(app)
     
     return app
