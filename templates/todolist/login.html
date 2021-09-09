@@ -1,0 +1,27 @@
+{% extends "todolist/base.html" %}
+{% block title %}
+THE TODOLIST APP!     
+{%endblock%}
+{% block body %}
+
+<div class="signup-form" id="task-modal1">
+    <form action="{{url_for('auth.login',id=id)}}" method="post">
+		<h2>Login</h2>
+        <div class="form-group">
+        	<input type="email" class="form-control" name="email" id="email" placeholder="Email" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required="required">
+        </div>
+        <div class="form-group">
+			<label class="form-check-label"><input type="checkbox" id="remember" name="remember" required="required"> Remember</label>
+		</div>
+		<div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Login</button>
+        </div>
+    </form>
+                     <div class='alert'>{{alert}}</div>
+	<div class="text-center">Don't have an account? <a href="/signup" style="color: #0000cd;">Sign up</a></div>
+</div>
+{% endblock %}
+

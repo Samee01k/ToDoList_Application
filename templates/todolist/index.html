@@ -1,17 +1,79 @@
 {% extends "todolist/base.html" %}
 {% block title %}
-THE TODOLIST APP!     
+THE TODOLIST APP! 
 {%endblock%}
+
+
+
 {% block body %}
-
-
-    <!--<main role="main" class="container extra-bottom"><p style = "font-family:courier,arial,helvetica;"><a href="/todolist">Let's get started</a></p></main> -->
-    
+    <!--<main role="main" class="container extra-bottom"><p style = "font-family:courier,arial,helvetica;"><a href="/todolist">Let's get started</a></p></main> 
     <main class="container">
         <div style="text-align: left;"><p style = "font-family:courier,arial,helvetica;"><a href="/todolist"><h2>Add a Task</h2></a></p></div>
-    </main>
+    </main> -->
+
+<!--add task button -->
+<main class="container">
+    <div style="text-align: left;" id="taskbtn">
+        <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#task-modal1"
+            data-source="New Task"><a href="/login">Let's Get Started!</a></button>
+    </div>
+</main>
+
+
+
+<!-- the task boxx 
+<div class="modal fade" id="task-modal1" tabindex="-1" aria-labelledby="Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="Label">Add a task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="{{url_for('todolist.todolist')}}" method="POST">
+            
+            
+            
+                <div class="modal-body">
+             <div class="input-group mb-3">
+		    <label class="input-group-text" for="email">Email address</label>
+		    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+		  </div>
+                    </div>
+		  
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="title">Task</label>
+                        <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp"
+                            placeholder="Task Title">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="description">description</label>
+                        <input type="text" class="form-control" name="description" id="description"
+                            aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="status">Status:</label>
+                        <select class="form-control" id="status" name="status">
+                            <option>TODO</option>
+                            <option>In Progress</option>
+                            <option>Done</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="submit-task" type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+        </div>
+    </div>
+</div>
+</form> -->
 
     
-
 {% endblock %}
 

@@ -1,0 +1,36 @@
+{% extends "todolist/base.html" %}
+{% block title %}
+THE TODOLIST APP!     
+{%endblock%}
+{% block body %}
+
+<div class="signup-form" id="task-modal1">
+    <form action="{{url_for('auth.signup')}}" method="post">
+		<h2>Signup</h2>
+		<p class="hint-text">Create your account. It's free and only takes a minute.</p>
+        <div class="form-group">
+			<div class="row">
+				<div class="col"><input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" required="required"></div>
+			</div>        	
+        </div>
+        <div class="form-group">
+        	<input type="email" class="form-control" name="email" id="email" placeholder="Email" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm Password" required="required">
+        </div>        
+        <div class="form-group">
+			<label class="form-check-label" for="remember"><input type="checkbox" id="remember" name="remember" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+		</div>
+		<div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+        </div>
+    </form>
+    		<p class='alert'>{{alert}}</p>
+	<div class="text-center">Already have an account? <a href="/login" style="color: #0000cd;">Sign in</a></div>
+</div>
+{% endblock %}
+

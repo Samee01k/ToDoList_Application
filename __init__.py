@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask
 import os
 
 
@@ -8,9 +8,9 @@ def create_app():
         DATABASE="todos"
     )
         
-        
-    from . import db,todolist
+    from . import db,todolist,auth
     app.register_blueprint(todolist.bp)    
+    app.register_blueprint(auth.bp)
     
     db.init_app(app)
     
