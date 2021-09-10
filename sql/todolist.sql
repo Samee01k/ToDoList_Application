@@ -14,7 +14,7 @@ CREATE TABLE todolist(
     task TEXT UNIQUE NOT NULL,
     description TEXT UNIQUE NOT NULL,
     status TEXT DEFAULT 'TODO' NOT NULL,
-    usr SERIAL references users(id) 
+    --usr SERIAL references users(id) 
     );
 
 

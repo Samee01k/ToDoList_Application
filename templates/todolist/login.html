@@ -5,7 +5,7 @@ THE TODOLIST APP!
 {% block body %}
 
 <div class="signup-form" id="task-modal1">
-    <form action="{{url_for('auth.login',id=id)}}" method="post">
+    <form action="{{url_for('auth.login',id=id, usr=usr)}}" method="post">
 		<h2>Login</h2>
         <div class="form-group">
         	<input type="email" class="form-control" name="email" id="email" placeholder="Email" required="required">

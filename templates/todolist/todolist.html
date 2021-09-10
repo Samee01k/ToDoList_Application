@@ -25,7 +25,7 @@ ADD TASKS!
 
 
 
-            {% for id,task,description,status,usr in data %}
+            {% for id,task,description,status in data %}
             <tr>
                 <th scope="row">{{loop.index}}</th>
                 <td>{{task}}</td>
@@ -47,7 +47,7 @@ ADD TASKS!
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
-                            <form action="{{url_for('todolist.update',id=id, usr=usr)}}" method="POST">
+                            <form action="{{url_for('todolist.update',id=id)}}" method="POST">
                                 <!-- task-->
                                 <div class="modal-body">
                                     <div class="input-group mb-3">
@@ -102,7 +102,7 @@ ADD TASKS!
                                 <p>Are you sure you want to delete {{task}}? </p>
                             </div>
                             <div class="modal-footer">
-                                <form action="{{url_for('todolist.delete',id=id, usr=usr)}}" method="POST">
+                                <form action="{{url_for('todolist.delete',id=id)}}" method="POST">
                                     <button type="submit" id="delete-task"
                                         class="btn btn-outline-warning">Delete</button>
                                 </form>
@@ -147,7 +147,7 @@ ADD TASKS!
                 <h5 class="modal-title" id="Label">Add a task</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{url_for('todolist.todolist',id=id,usr=usr)}}" method="POST">
+            <form action="{{url_for('todolist.todolist',id=id)}}" method="POST">
                 <!-- task-->
                 <div class="modal-body">
                     <div class="input-group mb-3">
